@@ -15,8 +15,15 @@ build {
 }
 
 repositories {
-    //mavenLocal()
-    jcenter()
+    maven {
+        url 'https://repo.sdc-automation.se/releases'
+        credentials {
+            username = System.getenv("SDC_REPO_USER")
+            password = System.getenv("SDC_REPO_USER_TOKEN")
+        }
+    }
+    maven()
+    mavenLocal()
     maven {
         url 'https://jitpack.io'
     }
