@@ -50,4 +50,9 @@ public class BacnetObjectNode extends DFPointNode {
         }
         return (long) (seconds * 1000);
     }
+
+    @Override
+    public boolean isNull() {
+        return this == null;
+    }
 }

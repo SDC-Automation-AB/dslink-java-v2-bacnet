@@ -22,8 +22,8 @@ repositories {
             password = System.getenv("SDC_REPO_USER_TOKEN")
         }
     }
-    maven()
     mavenLocal()
+    mavenCentral()
     maven {
         url 'https://jitpack.io'
     }
@@ -31,8 +31,8 @@ repositories {
 
 dependencies {
     //implementation 'org.iot-dsa:dslink-v2-websocket:+' //for a locally installed sdk   
-    implementation 'com.github.iot-dsa-v2.sdk-dslink-java-v2:dslink-v2-websocket:+'
-    implementation 'com.github.iot-dsa-v2:driver-framework-java-v2-prototype:master-SNAPSHOT'
+    implementation 'com.github.iot-dsa-v2.sdk-dslink-java-v2:dslink-v2-websocket:0.79.2'
+    implementation 'com.github.iot-dsa-v2:driver-framework-java-v2-prototype:1.1.5'
     implementation 'org.apache.commons:commons-lang3:3.4'
     implementation 'commons-logging:commons-logging:+'
     //Testing framework
